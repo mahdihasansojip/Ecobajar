@@ -19,7 +19,7 @@ const TopBar = () => {
   return (
 
     <div className='border-b border-solid border-b-gry-50 items-center font-poppins text-[#666666]  text-sm py-[12px]'>
-       <Container>
+       <Container>k
         <div className='flex justify-between'>
           <div className='flex items-center  gap-[6px]'> <CiLocationOn /> Store Location: Lincoln- 344, Illinois, Chicago, USA</div>
           <div className='flex gap-[20px] '>
