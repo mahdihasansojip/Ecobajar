@@ -9,9 +9,9 @@ const TopBar = () => {
   
 
   let HandleClicklng = ()=> {
-    if(droplng.current.style.display == 'none'){
+    if(droplng.current.style.display === 'none'){
       droplng.current.style.display = 'block'
-    } else if (droplng.current.style.display == 'block'){
+    } else {
       droplng.current.style.display = 'none'
     }
   }
@@ -19,7 +19,7 @@ const TopBar = () => {
   return (
 
     <div className='border-b border-solid border-b-gry-50 items-center font-poppins text-[#666666]  text-sm py-[12px]'>
-       <Container>k
+       <Container>
         <div className='flex justify-between'>
           <div className='flex items-center  gap-[6px]'> <CiLocationOn /> Store Location: Lincoln- 344, Illinois, Chicago, USA</div>
           <div className='flex gap-[20px] '>
