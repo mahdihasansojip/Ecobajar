@@ -7,8 +7,9 @@ import { IoBagOutline } from "react-icons/io5";
 
 const SearchBar = () => {
   return (
-    <Container> 
-      <div className='flex justify-between py-[27px]'>
+   <div className='border-b border-solid border-b-gry'>
+     <Container> 
+      <div className='items-center flex justify-between py-[27px]'>
         <div>
           <img src={logo} alt="logo" fetchpriority="high"/>
         </div>
@@ -19,12 +20,12 @@ const SearchBar = () => {
         </div>
         <div className='flex '>
          <div className='gap-[32px] flex'>
-           <div className=' relative after:absolute after:top-0 after:left-[48px]  after:w-[2px] after:h-[25px] after:bg-[#CCCCCC] after:content-[""] '>
+           <div className='cursor-pointer relative after:absolute after:top-0 after:left-[48px]  after:w-[2px] after:h-[25px] after:bg-[#CCCCCC] after:content-[""] '>
             <LoveIcon/>
           </div>
           <div className='relative'>
-         <div className='w-[20px] h-[20px] bg-[#2C742F] not-first: text-white absolute left-[18px] top-[-7px] flex items-center justify-center rounded-full'>2</div>
-          <IoBagOutline className='text-[34px]' />
+         <div className='w-[20px] h-[20px] cursor-pointer bg-[#2C742F] not-first: text-white absolute left-[18px] top-[-7px] flex items-center justify-center rounded-full'>2</div>
+          <IoBagOutline className='text-[34px] cursor-pointer' />
           </div>
          </div>
           <div className='pl-[12px] '>
@@ -35,6 +36,7 @@ const SearchBar = () => {
         </div>
       </div>
     </Container>
+   </div>
   )
 }
 
