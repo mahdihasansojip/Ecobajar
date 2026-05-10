@@ -9,10 +9,25 @@ import useOutsideClick from '../Hooks/OutsiteClick';
 const Navbar = () => {
 
   let [sidebar,setSidebar] = useState(false)
+  let [dropDown,setDropDown] = useState(false)
+  let [dropDowntow,setDropDowntow] = useState(false)
+  let [dropDownthre,setDropDownthre] = useState(false)
+  let [dropDownfor,setDropDownfor] = useState(false)
+  let [dropDownfive,setDropDownfive] = useState(false)
 
   let Sidebarref = useRef(null);
+  let DropDownref = useRef(null);
+  let DropDowntowref = useRef(null);
+  let DropDownthreref = useRef(null);
+  let DropDownforref = useRef(null);
+  let DropDownfiveref = useRef(null);
 
   useOutsideClick(Sidebarref, ()=> setSidebar(false),sidebar)
+  useOutsideClick(DropDownref, ()=> setDropDown(false),dropDown)
+  useOutsideClick(DropDowntowref, ()=> setDropDowntow(false),dropDowntow)
+  useOutsideClick(DropDownthreref, ()=> setDropDownthre(false),dropDownthre)
+  useOutsideClick(DropDownforref, ()=> setDropDownfor(false),dropDownfor)
+  useOutsideClick(DropDownfiveref, ()=> setDropDownfive(false),dropDownfive)
 
   return (
    
@@ -83,19 +98,99 @@ const Navbar = () => {
     </ul>
   </div>
 
-         </div>
+              </div>
 
 
                
 
-                <li>
-                    <Link className='font-poppins bg-[#333333] text-[20px]  font-bold absolute top-0 left-[64px] py-[17px] px-[20px] text-[white] flex items-center ' to='#'>All Categories <FaAngleDown className=' cursor-pointer flex pl-[4px] ml-[40px] text-[20px]'/></Link>
+                <li ref={DropDownref}>
+                    <Link onClick={()=> setDropDown(!dropDown)} className='font-poppins  bg-[#333333] text-[20px]  font-bold absolute top-0 left-[64px] py-[17px] px-[20px] text-[white] flex items-center ' to='#'>All Categories <FaAngleDown className=' cursor-pointer flex pl-[4px] ml-[40px] text-[20px]'/></Link>
+
+                 {dropDown &&
+                 
+                  <div className='absolute top-[60px] left-[90px] bg-gray-200'>
+                    <ul className='w-[200px] h-full font-poppins font-medium text-[23px] text-center'>
+                      <li className='hover:bg-black hover:text-white py-[10px]'>home</li>
+                      <li className='hover:bg-black hover:text-white py-[10px]'>home</li>
+                      <li className='hover:bg-black hover:text-white py-[10px]'>home</li>
+                      <li className='hover:bg-black hover:text-white py-[10px]'>home</li>
+                      <li className='hover:bg-black hover:text-white py-[10px]'>home</li>
+                     
+                    </ul>
+                  </div>
+
+                 }
                 </li>
 
-                <li  ><Link className='flex items-center hover:text-[white]'  to='#'>Home <FaAngleDown className=' cursor-pointer pl-[4px] text-[17px]'/></Link></li>
-                <li  ><Link className='flex items-center hover:text-[white]'  to='#'>Shop <FaAngleDown className=' cursor-pointer pl-[4px] text-[17px]'/></Link></li>
-                <li  ><Link className='flex items-center hover:text-[white]'  to='#'>Pages <FaAngleDown className=' cursor-pointer pl-[4px] text-[17px]'/></Link></li>
-                <li  ><Link className='flex items-center hover:text-[white]'  to='#'>Blog <FaAngleDown className=' cursor-pointer pl-[4px] text-[17px]'/></Link></li>
+
+                <li ref={DropDowntowref} ><Link onClick={()=> setDropDowntow(!dropDowntow)} className='flex items-center hover:text-[white]'  to='#'>Home <FaAngleDown className=' cursor-pointer pl-[4px] text-[17px]'/></Link>
+
+                 {dropDowntow &&
+                 
+                  <div className='absolute top-[60px]  bg-gray-200'>
+                    <ul className='w-[100px] h-full font-poppins font-medium text-[15px] text-center'>
+                      <li className='hover:bg-primary hover:text-black py-[10px]'>home</li>
+                      <li className='hover:bg-primary hover:text-black py-[10px]'>home</li>
+                      <li className='hover:bg-primary hover:text-black py-[10px]'>home</li>
+                      <li className='hover:bg-primary hover:text-black py-[10px]'>home</li>
+                      <li className='hover:bg-primary hover:text-black py-[10px]'>home</li>
+                     
+                    </ul>
+                  </div>
+
+                 }
+                </li>
+
+                 <li ref={DropDownthreref} ><Link onClick={()=> setDropDownthre(!dropDownthre)} className='flex items-center hover:text-[white]'  to='#'>Shop <FaAngleDown className=' cursor-pointer pl-[4px] text-[17px]'/></Link>
+
+                 {dropDownthre &&
+                 
+                  <div className='absolute top-[60px]  bg-gray-200'>
+                    <ul className='w-[100px] h-full font-poppins font-medium text-[15px] text-center'>
+                      <li className='hover:bg-primary hover:text-black py-[10px]'>home</li>
+                      <li className='hover:bg-primary hover:text-black py-[10px]'>home</li>
+                      <li className='hover:bg-primary hover:text-black py-[10px]'>home</li>
+                      <li className='hover:bg-primary hover:text-black py-[10px]'>home</li>
+                      <li className='hover:bg-primary hover:text-black py-[10px]'>home</li>  
+                    </ul>
+                  </div>
+                 }
+                </li>
+
+
+                 <li ref={DropDownforref} ><Link onClick={()=> setDropDownfor(!dropDownfor)} className='flex items-center hover:text-[white]'  to='#'>Pages<FaAngleDown className=' cursor-pointer pl-[4px] text-[17px]'/></Link>
+
+                 {dropDownfor &&
+                 
+                  <div className='absolute top-[60px]  bg-gray-200'>
+                    <ul className='w-[100px] h-full font-poppins font-medium text-[15px] text-center'>
+                      <li className='hover:bg-primary hover:text-black py-[10px]'>home</li>
+                      <li className='hover:bg-primary hover:text-black py-[10px]'>home</li>
+                      <li className='hover:bg-primary hover:text-black py-[10px]'>home</li>
+                      <li className='hover:bg-primary hover:text-black py-[10px]'>home</li>
+                      <li className='hover:bg-primary hover:text-black py-[10px]'>home</li>  
+                    </ul>
+                  </div>
+                 }
+                </li>
+
+
+                  <li ref={DropDownfiveref} ><Link onClick={()=> setDropDownfive(!dropDownfive)} className='flex items-center hover:text-[white]'  to='#'>Blog<FaAngleDown className=' cursor-pointer pl-[4px] text-[17px]'/></Link>
+
+                 {dropDownfive &&
+                 
+                  <div className='absolute top-[60px]  bg-gray-200'>
+                    <ul className='w-[100px] h-full font-poppins font-medium text-[15px] text-center'>
+                      <li className='hover:bg-primary hover:text-black py-[10px]'>home</li>
+                      <li className='hover:bg-primary hover:text-black py-[10px]'>home</li>
+                      <li className='hover:bg-primary hover:text-black py-[10px]'>home</li>
+                      <li className='hover:bg-primary hover:text-black py-[10px]'>home</li>
+                      <li className='hover:bg-primary hover:text-black py-[10px]'>home</li>  
+                    </ul>
+                  </div>
+                 }
+                </li>
+
                
                 <li ><Link className='flex items-center hover:text-[white]'>About Us</Link>  </li>
                 <li ><Link className='flex items-center hover:text-[white]'>Contact Us</Link>  </li>
