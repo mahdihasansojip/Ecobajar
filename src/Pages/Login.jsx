@@ -1,17 +1,33 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Container from '../Components/Layuots/Container'
 import { Link } from 'react-router'
+import { IoEye } from "react-icons/io5";
+import { IoMdEyeOff } from "react-icons/io";
 
 const Login = () => {
+
+  let [show,setShow] = useState(false)
   return (
      <div>
      
         <div className='max-w-[520px] shadow-[0_0px_6px_rgba(0,0,0,0.4)] p-[20px] mx-auto my-[80px] rounded-md'>
           <h2 className='text-black text-center font-poppins font-semibold text-[32px] py-[15px]'>Sign In</h2>
          
-          <form action="">
+         
              <input type="email" placeholder='Email' className='w-full rounded-md mb-[12px] py-[14px] px-[16px] border border-[#ccc8c8]' />
-           <input type="password" placeholder='Password' className='w-full rounded-md mb-[12px] py-[14px] px-[16px] border border-[#ccc8c8]' />
+
+           <div className='relative'>
+            <input type={show ? "text" : "password"} placeholder='Password' className='w-full rounded-md mb-[12px] py-[14px] px-[16px] border border-[#ccc8c8]' />
+
+          <div className='absolute top-[15px] right-[10px] text-[22px]' onClick={()=> setShow(!show)}>
+          {
+            show ?
+            <IoEye />
+            :
+            <IoMdEyeOff />
+          }
+          </div>
+           </div>
           
         <div className='flex justify-between items-center'> 
         <div className='flex items-center my-[8px]'>
@@ -26,7 +42,7 @@ const Login = () => {
           <Link to="/registration" className='font-poppins font-semibold hover:text-blue-600  font-sm text-black'> Register</Link>
         </p>
         
-          </form>
+          
         </div>
     
     </div>

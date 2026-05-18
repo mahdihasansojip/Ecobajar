@@ -2,6 +2,8 @@ import React, { useState } from 'react'
 import Container from '../Components/Layuots/Container'
 import { Link } from 'react-router'
 import axios from 'axios'
+import { IoEye } from "react-icons/io5";
+import { IoEyeOff } from "react-icons/io5";
 
 const Registration = () => {
 
@@ -32,6 +34,9 @@ const Registration = () => {
     
   }
 
+  let [show,setShow] = useState(false)
+  let [showtow,setShowtow] = useState(false)
+
   return (
    
      <div>
@@ -41,12 +46,43 @@ const Registration = () => {
       
            
            <input onChange={handlechenge} name='email' type="email" placeholder='Email' className='w-full rounded-md mb-[12px] py-[14px] px-[16px] border border-[#ccc8c8]' />
-           <input onChange={handlechenge} name='password' type="password" placeholder='Password' className='w-full rounded-md mb-[12px] py-[14px] px-[16px] border border-[#ccc8c8]' />
-           <input onChange={handlechenge} name='confirmpassword' type="password" placeholder='Confirm Password' className='w-full rounded-md mb-[12px] py-[14px] px-[16px] border border-[#ccc8c8]' />
+
+          <div className='relative'>
+            
+           <input  onChange={handlechenge} name='password' type={show ? "text" : "password"} placeholder='Password' className='w-full rounded-md mb-[12px] py-[14px] px-[16px] border border-[#ccc8c8]' />
+          
+          <div className='absolute top-[14px] right-[7px] text-[22px]' onClick={()=> setShow(!show)}>
+            {
+              show
+               ?
+               < IoEye  />
+              :
+                <IoEyeOff />
+            }
+          </div>
+          </div>
+
+
+          <div className='relative'>
+            
+           <input  onChange={handlechenge} name='confirmpassword' type={showtow ? "text" : "password"} placeholder='Confirm Password' className='w-full rounded-md mb-[12px] py-[14px] px-[16px] border border-[#ccc8c8]' />
+          
+          <div className='absolute top-[14px] right-[7px] text-[22px]' onClick={()=> setShowtow(!showtow)}>
+            {
+              showtow
+               ?
+               < IoEye  />
+              :
+                <IoEyeOff />
+            }
+          </div>
+          </div>
          
         <div className='flex items-center my-[8px]'>
+
+          <input id='agree' onChange={handlechenge} name='term' type="checkbox" className='myInput mr-2 w-[18px] h-[18px] cursor-pointer ' />
           
-         <label className='font-poppins font-md text-sm text-[#666666]' > <input onChange={handlechenge} name='term' type="checkbox" className='mr-2 w-[18px] h-[18px]' /> Accept all terms & Conditions</label>
+         <label htmlFor='agree' className='mylabel font-poppins font-md text-sm text-[#666666] cursor-pointer' >  Accept all terms & Conditions</label>
         </div>
         <button onClick={handleClick} className='bg-primary w-full cursor-pointer py-[10px] my-[12px] rounded-full text-white font-poppins font-semibold text-sm hover:bg-blue-700 '>Create Account</button>
 
