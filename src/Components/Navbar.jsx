@@ -209,8 +209,8 @@ const Navbar = () => {
                   <div className='absolute top-[60px] z-3 bg-gray-200'>
                     <ul className='w-[100px] z-13 h-full font-poppins font-medium text-[15px] text-center'>
                       <li className='hover:bg-primary hover:text-black py-[10px]'>home</li>
-                      <li className='hover:bg-primary hover:text-black py-[10px]'>home</li>
-                      <li className='hover:bg-primary hover:text-black py-[10px]'>home</li>
+                      <li className='hover:bg-primary hover:text-black py-[10px]'>About</li>
+                      <li className='hover:bg-primary hover:text-black py-[10px]'>Page</li>
                       <li className='hover:bg-primary hover:text-black py-[10px]'>home</li>
                       <li className='hover:bg-primary hover:text-black py-[10px]'>home</li>  
                     </ul>
