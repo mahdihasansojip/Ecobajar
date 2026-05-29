@@ -16,8 +16,13 @@ const Forget = () => {
              <input type="email" placeholder='Email' className='w-full rounded-md mb-[12px] py-[14px] px-[16px] border border-[#ccc8c8]' />
 
            <div className='relative'>
+
+            
           
-        
+        <div>dddddd</div>
+
+
+
            </div>
           
         <div className='flex justify-between items-center'> 
