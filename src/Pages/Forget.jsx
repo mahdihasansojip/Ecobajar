@@ -27,7 +27,10 @@ const Forget = () => {
         </div>
         <p className='font-poppins font-md text-sm text-[#666666]'><Link className='hover:text-blue-700 hover:font-semibold' to="/reset-password">Reset Password</Link></p>
         </div>
+       
+       <Link to="/reset-password">
         <button className='bg-primary w-full cursor-pointer py-[10px] my-[12px] rounded-full text-white font-poppins font-semibold text-sm hover:bg-red-700 '>Submit</button>
+       </Link>
 
         <p className='font-poppins font-sm text-sm text-[#666666] text-center py-[10px]'>Don’t have account?
           <Link to="/login" className='font-poppins font-semibold hover:font-bold hover:text-blue-600  font-sm text-black'>    Login</Link>

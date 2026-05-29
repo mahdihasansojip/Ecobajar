@@ -126,7 +126,7 @@ const Navbar = () => {
 
               </div>
                 <li ref={DropDownref}>
-                    <Link to="/All Categories" onMouseEnter={()=> setDropDown(!dropDown)}  className='font-poppins  bg-[#333333] text-[20px]  font-bold absolute top-0 left-[64px] py-[17px] px-[20px] text-[white] flex items-center ' to='#'>All Categories <FaAngleDown className={`cursor-pointer flex pl-[4px] ml-[40px] duration-300 ${dropDown ? 'rotate-180' : 'rotate-0'} text-[20px]`} /></Link>
+                    <Link onMouseEnter={()=> setDropDown(!dropDown)}  className='font-poppins  bg-[#333333] text-[20px]  font-bold absolute top-0 left-[64px] py-[17px] px-[20px] text-[white] flex items-center ' to='#'>All Categories <FaAngleDown className={`cursor-pointer flex pl-[4px] ml-[40px] duration-300 ${dropDown ? 'rotate-180' : 'rotate-0'} text-[20px]`} /></Link>
 
                  {dropDown &&
                  
@@ -150,11 +150,11 @@ const Navbar = () => {
                 </li>
 
 
-                <li ref={DropDowntowref} ><Link  to="Home" onClick={()=> setDropDowntow(!dropDowntow)} className='flex items-center hover:text-[white]' >Home <FaAngleDown className={` cursor-pointer pl-[4px] duration-300 text-[17px] ${dropDowntow ? 'rotate-180 ml-[4px]' : 'rotate-0'}`}/></Link>
+                <li ref={DropDowntowref} ><Link onClick={()=> setDropDowntow(!dropDowntow)} className='flex items-center hover:text-[white]'  to='#'>Home <FaAngleDown className={` cursor-pointer pl-[4px] duration-300 text-[17px] ${dropDowntow ? 'rotate-180 ml-[4px]' : 'rotate-0'}`}/></Link>
 
                  {dropDowntow &&
                  
-                  <div className='absolute top-[60px]  z-3 bg-gray-200 '>
+                  <div className='absolute top-[60px]  z-[3] bg-gray-200 '>
                     <ul className='w-[100px] h-full font-poppins font-medium text-[15px] text-center'>
                       <li className='hover:bg-primary hover:text-black py-[10px]'>home</li>
                       <li className='hover:bg-primary hover:text-black py-[10px]'>About</li>
@@ -168,7 +168,7 @@ const Navbar = () => {
                  }
                 </li>
 
-                 <li ref={DropDownthreref} ><Link onClick={()=> setDropDownthre(!dropDownthre)} className='flex items-center hover:text-[white]'  to='shop'>Shop <FaAngleDown className={` cursor-pointer pl-[4px] duration-300 text-[17px] ${dropDownthre ? 'rotate-180 ml-[4px]' : 'rotate-0'}`}/></Link>
+                 <li ref={DropDownthreref} ><Link onClick={()=> setDropDownthre(!dropDownthre)} className='flex items-center hover:text-[white]'  to='#'>Shop <FaAngleDown className={` cursor-pointer pl-[4px] duration-300 text-[17px] ${dropDownthre ? 'rotate-180 ml-[4px]' : 'rotate-0'}`}/></Link>
 
                  {dropDownthre &&
                  
@@ -185,7 +185,7 @@ const Navbar = () => {
                 </li>
 
 
-                 <li ref={DropDownforref} ><Link onClick={()=> setDropDownfor(!dropDownfor)} className='flex items-center hover:text-[white]'  to='pages'>Pages<FaAngleDown className={` cursor-pointer pl-[4px] duration-300 text-[17px] ${dropDownfor ? 'rotate-180 ml-[4px]' : 'rotate-0'}`}/></Link>
+                 <li ref={DropDownforref} ><Link onClick={()=> setDropDownfor(!dropDownfor)} className='flex items-center hover:text-[white]'  to='#'>Pages<FaAngleDown className={` cursor-pointer pl-[4px] duration-300 text-[17px] ${dropDownfor ? 'rotate-180 ml-[4px]' : 'rotate-0'}`}/></Link>
 
                  {dropDownfor &&
                  
@@ -202,7 +202,7 @@ const Navbar = () => {
                 </li>
 
 
-                  <li ref={DropDownfiveref} ><Link onClick={()=> setDropDownfive(!dropDownfive)} className='flex items-center hover:text-[white]'  to='blog'>Blog<FaAngleDown className={` cursor-pointer pl-[4px] duration-300 text-[17px] ${dropDownfive ? 'rotate-180 ml-[4px]' : 'rotate-0'}`}/></Link>
+                  <li ref={DropDownfiveref} ><Link onClick={()=> setDropDownfive(!dropDownfive)} className='flex items-center hover:text-[white]'  to='#'>Blog<FaAngleDown className={` cursor-pointer pl-[4px] duration-300 text-[17px] ${dropDownfive ? 'rotate-180 ml-[4px]' : 'rotate-0'}`}/></Link>
 
                  {dropDownfive &&
                  
@@ -210,7 +210,7 @@ const Navbar = () => {
                     <ul className='w-[100px] z-13 h-full font-poppins font-medium text-[15px] text-center'>
                       <li className='hover:bg-primary hover:text-black py-[10px]'>home</li>
                       <li className='hover:bg-primary hover:text-black py-[10px]'>About</li>
-                      <li className='hover:bg-primary hover:text-black py-[10px]'>Page</li>
+                      <li className='hover:bg-primary hover:text-black py-[10px]'>home</li>
                       <li className='hover:bg-primary hover:text-black py-[10px]'>home</li>
                       <li className='hover:bg-primary hover:text-black py-[10px]'>home</li>  
                     </ul>
@@ -219,8 +219,8 @@ const Navbar = () => {
                 </li>
 
                
-                <li ><Link to="about us" className='flex items-center hover:text-[white]'>About Us</Link>  </li>
-                <li ><Link to="contact us" className='flex items-center hover:text-[white]'>Contact Us</Link>  </li>
+                <li ><Link className='flex items-center hover:text-[white]'>About Us</Link>  </li>
+                <li ><Link className='flex items-center hover:text-[white]'>Contact Us</Link>  </li>
                 
             </ul>
            

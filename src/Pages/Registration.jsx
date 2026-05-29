@@ -84,7 +84,10 @@ const Registration = () => {
           
          <label htmlFor='agree' className='mylabel font-poppins font-md text-sm text-[#666666] cursor-pointer' >  Accept all terms & Conditions</label>
         </div>
+       
+       <Link to="/login">
         <button onClick={handleClick} className='bg-primary w-full cursor-pointer py-[10px] my-[12px] rounded-full text-white font-poppins font-semibold text-sm hover:bg-blue-700 '>Create Account</button>
+       </Link>
 
         <p className='font-poppins font-sm text-sm text-[#666666] text-center py-[10px]'>Already have account 
           <Link to="/login" className='font-poppins font-semibold hover:text-blue-600 font-sm text-black'> Login</Link>

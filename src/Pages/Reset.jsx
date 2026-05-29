@@ -48,9 +48,11 @@ const Reset = () => {
                 </div>
               
                 </div>
-                <button className='bg-primary w-full cursor-pointer py-[10px] my-[12px] rounded-full text-white font-poppins font-semibold text-[16px] hover:bg-blue-700 '>Reset Password</button>
-        
                
+        
+               <Link to="/login">
+                <button className='bg-primary w-full cursor-pointer py-[10px] my-[12px] rounded-full text-white font-poppins font-semibold text-[16px] hover:bg-blue-700 '>Reset Password</button>
+               </Link>
                 
                   
                 </div>

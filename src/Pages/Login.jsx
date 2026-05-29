@@ -36,7 +36,10 @@ const Login = () => {
         </div>
         <p className='font-poppins font-md text-sm text-[#666666]'><Link className='hover:text-blue-700 hover:font-semibold' to="/forget">Forget Password</Link></p>
         </div>
+        
+        <Link to="/">
         <button className='bg-primary w-full cursor-pointer py-[10px] my-[12px] rounded-full text-white font-poppins font-semibold text-[16px] hover:bg-blue-700 '>Login</button>
+        </Link>
 
         <p className='font-poppins font-sm text-sm text-[#666666] text-center py-[10px]'>Don’t have account?
           <Link to="/registration" className='font-poppins font-semibold hover:text-blue-600 hover:font-bold font-sm text-black'>  Register</Link>
