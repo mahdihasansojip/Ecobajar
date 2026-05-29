@@ -17,9 +17,9 @@ const Forget = () => {
 
            <div className='relative'>
 
-            
+
           
-        <div>dddddd</div>
+        <div>dddddsdfgsdfgsdfgsdfgd</div>
 
 
 
